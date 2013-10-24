@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Betamore</title>
+		<style>
+		.link {color: black; text-decoration: none;}
+		</style>
+	<head/>
+	<body>
+	<h1>Betamore Products for Sale</h1>
+	
+	<% @products.each do |product| %>
+	<%= link_to product.name, product_path(product) %>
+	<%= time_ago_in_words product.created_at %>
+	<% end %>
+	
+
+		<table>
+		<tr>
+			<td><img src="http://pjb3.github.io/betastore/products/hat.jpg"> <a class="link" href="http://betamore.com/hatdetails"><p><center>Hat</center></p><a/></td>
+			<td><img src="http://pjb3.github.io/betastore/products/hoodie.jpg"><a class="link" href="http://betamore.com/hoodiedetails"><p><center>Hoodie</center></p><a/></td>
+			<td><img src="http://pjb3.github.io/betastore/products/iphone_case.jpg"><a class="link" href="http://betamore.com/iphone_casedetails"><p><center>iPhone Case</center></p><a/></td>
+		<tr>
+			<td><img src="http://pjb3.github.io/betastore/products/journal.jpg"> <a class="link" href="http://betamore.com/journaldetails"><p><center>Journal</center></p><a/></td>
+			<td><img src="http://pjb3.github.io/betastore/products/shirt.jpg"> <a class="link" href="http://betamore.com/shirtdetails"><p><center>Shirt</center></p><a/></td>
+			<td><img src="http://pjb3.github.io/betastore/products/sticker.jpg"> <a class="link" href="http://betamore.com/stickerdetails"><p><center>Sticker</center></p><a/></td>
+</body>
+</html>
